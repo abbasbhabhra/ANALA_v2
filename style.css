@@ -41,7 +41,6 @@ body {
     cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
 }
 
-
 .header h1 {
     font-size: 24px; /* Increase the font size for desktop */
     margin: 0;
@@ -99,14 +98,14 @@ body {
 }
 
 /* Center-align the sections and adjust size */
-.hero, .products, .clients, .about {
+.hero, .products, .clients, .about, .contact {
     text-align: center;
-    padding: 10vh 0; /* Update the padding to 50vh for full-screen sections */
+    padding: 10vh 0;
     width: 100%;
-    min-height: 80vh; /* Ensure minimum height of 100vh for full-screen effect */
-    font-family: 'Playfair Display', serif; /* Apply Playfair Display font to all sections */
-    position: relative; /* Added to position the video */
-    overflow: hidden; /* Hide any overflowing content */
+    min-height: 80vh;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Home Section Styles (Updated) */
@@ -131,27 +130,21 @@ body {
     z-index: -2; /* Place the video behind the overlay */
 }
 
-.hero-title {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #800020; /* Custom color */
-}
-
-.hero-text {
-    font-size: 14px;
-    margin-bottom: 40px;
-    color: #edcf8e; /* Custom color */
-}
-
-/* Section Titles */
-.products-title, .clients-title, .about-title {
+.hero-title,
+.products-title,
+.clients-title,
+.about-title,
+.contact-title {
     font-size: 32px;
     margin-bottom: 20px;
     color: #edcf8e; /* Custom color */
 }
 
-/* Section Text */
-.products-text, .clients-text, .about-text {
+.hero-text,
+.products-text,
+.clients-text,
+.about-text,
+.contact-text {
     font-size: 18px;
     margin-bottom: 40px;
     color: #322e18; /* Custom color */
@@ -305,23 +298,11 @@ button:hover {
 }
 
 /* Background Video for Home Section */
-.hero video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2; /* Place the video behind the overlay */
-}
-
-/* Background Videos for Other Sections */
-.products, .clients, .about {
-    position: relative; /* Added for positioning */
-    overflow: hidden; /* Hide overflowing content */
-}
-
-.products video, .clients video, .about video {
+.hero video,
+.products video,
+.clients video,
+.about video,
+.contact video {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -332,10 +313,11 @@ button:hover {
 }
 
 /* Change the link color for About, Contact, and Footer sections */
-.about a, .about a:hover, .contact a, .contact a:hover, #footer a, #footer a:hover {
+.about a,
+.contact a,
+#footer a {
     color: #ca5310; /* Custom Link Color */
 }
-
 
 /* Product Images Styles */
 .product-images {
@@ -378,6 +360,72 @@ button:hover {
     color: #333;
 }
 
+/* Contact Section */
+.contact {
+    min-height: 60vh; /* Reduce the height of the contact section */
+    padding-bottom: 20px; /* Add space at the bottom of the section */
+}
 
+.contact-form {
+    max-width: 500px; /* Adjust the maximum width of the form */
+    margin: 0 auto; /* Center-align the form */
+}
 
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
 
+.contact-form .form-control {
+    background-color: transparent;
+    border: 2px solid #ca5310; /* Custom border color */
+    color: #333; /* Custom text color */
+    font-size: 16px; /* Adjusted font size */
+    border-radius: 5px;
+}
+
+.contact-form .form-control:focus {
+    border-color: #907f53; /* Custom border color on focus */
+}
+
+.contact-form .form-control + span {
+    color: #333; /* Custom text color for labels */
+}
+
+.contact-form button {
+    background-color: #ca5310; /* Custom button color */
+    color: white; /* Custom button text color */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: yellow; /* Custom button color on hover */
+}
+
+/* Adjust spacing in the contact form */
+.contact-form .form-intro {
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments for the contact form */
+@media screen and (max-width: 768px) {
+    .contact-form .form-control {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    .contact-form button {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+}
+
+.hero,
+.products,
+.clients,
+.about,
+.contact {
+    border-bottom: 2px solid var(--header-footer-color); /* Dark Red */
+    padding-bottom: 50px; /* Add spacing between sections */
+}
