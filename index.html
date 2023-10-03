@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="style.css">
+      <script src="script.js"></script>
+      <title>ANALA</title>
+   </head>
+   <body class="landing">
+      <header id="header" class="header">
+         <a href="#home">
+            <img src="logo__3_-removebg-preview.png" alt="Your Logo" class="logo"> <!-- Add your logo here -->
+         </a>
+         <nav id="nav" class="navbar">
+            <ul class="nav-list">
+               <li><a href="#products">Products</a></li>
+               <li><a href="#clients">Clients</a></li>
+               <li><a href="#contact">Contact Us</a></li>
+            </ul>
+         </nav>
+      </header>
+      <!-- Home Section with Background Video -->
+      <section id="home" class="hero">
+         <!-- Video Container -->
+         <video autoplay loop muted playsinline poster="video-poster.jpg">
+            <!-- MP4 video source -->
+            <source src="spices_2.mp4" type="video/mp4">
+            <!-- Fallback message for browsers that don't support HTML5 video -->
+            Your browser does not support the video tag.
+         </video>
+         <div class="inner">
+            <h2 class="hero-title">Asli swaad <strong>ANALA</strong> ke saath!!</h2>
+         </div>
+      </section>
+      <!-- Products Section with Background Video -->
+      <section id="products" class="products">
+         <!-- Video Container -->
+         <video autoplay loop muted playsinline poster="video-poster.jpg">
+            <!-- MP4 video source -->
+            <source src="spices_1.mp4" type="video/mp4">
+            <!-- Fallback message for browsers that don't support HTML5 video -->
+            Your browser does not support the video tag.
+         </video>
+         <h2 class="products-title">Our Products</h2>
+         <div class="product-images">
+            <div class="product-slide">
+               <img src="turmeric (1).png" alt="Turmeric Powder">
+               <p class="product-details">Turmeric Powder</p>
+            </div>
+            <div class="product-slide">
+               <img src="cumin coriander (1).png" alt="Cumin Coriander Powder">
+               <p class="product-details">Cumin Coriander Powder</p>
+            </div>
+            <div class="product-slide">
+               <img src="red chilli (1).png" alt="Red Chilli Powder">
+               <p class="product-details">Red Chilli Powder</p>
+            </div>
+            <!-- Add more image elements and details for your products -->
+         </div>
+      </section>
+      <!-- Clients Section with Background Video -->
+      <section id="clients" class="clients">
+         <!-- Video Container -->
+         <video autoplay loop muted playsinline poster="video-poster.jpg">
+            <!-- MP4 video source -->
+            <source src="spices_3.mp4" type="video/mp4">
+            <!-- Fallback message for browsers that don't support HTML5 video -->
+            Your browser does not support the video tag.
+         </video>
+         <h2 class="clients-title">Our Clients</h2>
+         <p class="clients-text">
+            <em>ANALA has had the privilege of serving an extensive list of esteemed clients who share our passion for exceptional flavors. Our journey has taken us from local markets to international food chains, and our spices and masalas have earned a special place in kitchens around the world.</em>
+            <!-- Add your clients content here -->
+            <em>ANALA is more than just a spice provider; we are your partner in culinary excellence.</em>
+         </p>
+      </section>
+      <!-- Contact Us Section with Background Video -->
+      <section id="contact" class="about">
+         <!-- Video Container -->
+         <video autoplay loop muted playsinline poster="video-poster.jpg">
+            <!-- MP4 video source -->
+            <source src="spices_4.mp4" type="video/mp4">
+            <!-- Fallback message for browsers that don't support HTML5 video -->
+            Your browser does not support the video tag.
+         </video>
+         <h2 class="about-title">Contact Us</h2>
+         <div class="contact-details">
+            <div class="contact-info">
+               <p><strong>Email:</strong> <a href="mailto:analamasala@gmail.com">analamasala@gmail.com</a></p>
+               <p><strong>Phone:</strong> <a href="tel:+919427811470">+91 94278 11470</a></p>
+               <p><strong>Address:</strong> GIDC, Kharedi, Dahod, Gujarat, India - 389151</p>
+            </div>
+            <div class="social-media">
+               <a href="https://www.facebook.com/profile.php?id=100090314223058" target="_blank"><strong>Facebook</strong></a>
+               <a href="https://www.instagram.com/anala_masala/" target="_blank"><strong>Instagram</strong></a>
+               <!-- Add more social media links as needed -->
+            </div>
+         </div>
+         <div class="wrapper">
+            <div class="inner">
+               <form action="process.php" method="POST">
+                  <p class="form-intro">We value your feedback and inquiries. Please feel free to reach out to us with any questions, comments, or requests. Our team is here to assist you and will respond promptly to your message.</p>
+                  <div class="form-group">
+                     <label for="yourName">Your Name</label>
+                     <input type="text" id="yourName" class="form-control" name="yourName" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="yourMail">Your Mail</label>
+                     <input type="text" id="yourMail" class="form-control" name="yourMail" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="yourMessage">Your Message</label>
+                     <textarea id="yourMessage" class="form-control" name="yourMessage" required></textarea>
+                  </div>
+                  <button type="submit">Submit <i class="zmdi zmdi-arrow-right"></i></button>
+               </form>
+            </div>
+         </div>
+      </section>
+      <!-- Footer -->
+      <footer id="footer" class="footer">
+         <div class="footer-text">
+            <strong>Made by:</strong><a href="mailto:abbas.a.b52@outlook.com"> Abbas Bhabhrawala</a>
+         </div>
+         <p class="copyright"> - &copy; 2023 <strong>ANALA by BK Processing</strong></p>
+      </footer>
+</body>
+</html>

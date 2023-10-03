@@ -1,0 +1,383 @@
+/* Color Definitions */
+:root {
+    --primary-red: #805e73;
+    --primary-yellow: #edcf8e;
+    --primary-blue: #322e18;
+    --secondary-orange: #ca5310;
+    --secondary-green: #907f53;
+    --secondary-violet: #7e4114;
+    --header-footer-color: #800020; /* Dark Red */
+}
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font to all elements */
+}
+
+body {
+    background-color: #f0f0f0;
+    color: white; /* Set the default font color to white */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    flex-wrap: wrap; /* Wrap elements to the next line if needed */
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--header-footer-color); /* Dark Red */
+}
+
+.header .logo {
+    width: 80px; /* Adjust the width of the logo as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 10px; /* Add margin to the right of the logo to separate it from the navigation */
+    cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
+}
+
+
+.header h1 {
+    font-size: 24px; /* Increase the font size for desktop */
+    margin: 0;
+    text-align: left;
+    flex: 1; /* Expand to take available space */
+}
+
+.header .navbar {
+    flex: 1; /* Expand to take available space */
+    text-align: right; /* Align navigation to the right */
+}
+
+.header a {
+    color: white; /* White Text Color */
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack elements vertically for mobile */
+        text-align: center; /* Center-align text for mobile */
+    }
+
+    .header h1 {
+        font-size: 20px; /* Adjust the font size for mobile */
+    }
+
+    .header .navbar {
+        margin-top: 20px; /* Add spacing between header and navigation for mobile */
+        text-align: center; /* Center-align navigation for mobile */
+    }
+
+    .header a {
+        font-size: 14px; /* Adjust the font size for mobile */
+        margin: 10px 0; /* Add spacing between links */
+    }
+}
+
+/* Navigation Styles */
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Center-align the sections and adjust size */
+.hero, .products, .clients, .about {
+    text-align: center;
+    padding: 10vh 0; /* Update the padding to 50vh for full-screen sections */
+    width: 100%;
+    min-height: 80vh; /* Ensure minimum height of 100vh for full-screen effect */
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font to all sections */
+    position: relative; /* Added to position the video */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+/* Home Section Styles (Updated) */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Semi-transparent black overlay */
+    z-index: -1; /* Place the overlay behind other content */
+}
+
+.hero video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2; /* Place the video behind the overlay */
+}
+
+.hero-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #800020; /* Custom color */
+}
+
+.hero-text {
+    font-size: 14px;
+    margin-bottom: 40px;
+    color: #edcf8e; /* Custom color */
+}
+
+/* Section Titles */
+.products-title, .clients-title, .about-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #edcf8e; /* Custom color */
+}
+
+/* Section Text */
+.products-text, .clients-text, .about-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #322e18; /* Custom color */
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ca5310; /* Custom color */
+    color: white; /* White Text Color */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #907f53; /* Custom color on Hover */
+}
+
+/* Form Group Label Styles */
+.form-group label {
+    display: block;
+    font-size: 12px; /* Reduce font size for labels */
+    color: white; /* White Label Text Color */
+    text-align: center; /* Center-align the labels */
+    margin-bottom: 10px;
+}
+
+/* Form Intro Paragraph Styles */
+.form-intro {
+    font-size: 16px;
+    color: white; /* White Text Color */
+    margin-bottom: 20px; /* Add a margin to create a gap */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.wrapper .inner {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px; /* Limit the width of the form */
+    margin-top: 20px; /* Add space between the form and inner container */
+}
+
+.wrapper .inner h3 {
+    color: white; /* White Text Color */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white; /* White Text Color */
+    font-size: 14px; /* Adjusted font size */
+    outline: none;
+}
+
+.form-control:focus {
+    border-bottom: 2px solid #ca5310; /* Custom color on focus */
+}
+
+.form-control + span {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: white; /* White Text Color */
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.form-control:focus + span,
+.form-control:not(:placeholder-shown) + span {
+    font-size: 12px; /* Adjusted font size */
+    transform: translateY(-25px);
+}
+
+textarea.form-control {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+    min-height: 100px; /* Set a minimum height for the textarea */
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ca5310; /* Custom color */
+    color: white; /* White Text Color */
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Add space below the input fields */
+}
+
+button:hover {
+    background-color: yellow; /* Yellow Background Color on Hover */
+}
+
+/* Footer Styles */
+#footer {
+    background-color: var(--header-footer-color); /* Dark Red */
+    color: white; /* White Text Color */
+    text-align: center;
+    padding: 10px 0;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+/* Add some space to separate the footer from the main content */
+#footer::before {
+    content: "";
+    height: 10px; /* Adjust the height as needed */
+    width: 100%;
+    display: block;
+}
+
+/* Footer Text */
+.footer-text, .copyright {
+    font-size: 10px;
+    display: inline-block; /* Make them display on the same line */
+}
+
+/* Footer Text Spacing */
+.footer-text {
+    text-align: left;
+    margin: 0; /* Add some space between the texts */
+}
+
+.copyright {
+    text-align: right;
+    margin: 0;
+}
+
+/* Background Video for Home Section */
+.hero video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2; /* Place the video behind the overlay */
+}
+
+/* Background Videos for Other Sections */
+.products, .clients, .about {
+    position: relative; /* Added for positioning */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.products video, .clients video, .about video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2; /* Place the video behind the overlay */
+}
+
+/* Change the link color for About, Contact, and Footer sections */
+.about a, .about a:hover, .contact a, .contact a:hover, #footer a, #footer a:hover {
+    color: #ca5310; /* Custom Link Color */
+}
+
+
+/* Product Images Styles */
+.product-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.product-slide {
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-slide:hover {
+    transform: scale(1.1);
+}
+
+.product-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-details {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+
